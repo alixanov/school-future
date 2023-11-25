@@ -1,0 +1,14 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="btn">
+<g id="btn_2">
+<circle id="Ellipse 14" cx="25" cy="25" r="25" fill="url(#paint0_linear_318_32663)"/>
+<path id="Vector" d="M16 16L33 33M33 16L16 33" stroke="white" stroke-width="3" stroke-linecap="round"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_318_32663" x1="25.1282" y1="50" x2="48.6852" y2="2.75435" gradientUnits="userSpaceOnUse">
+<stop stop-color="#4271DF"/>
+<stop offset="1" stop-color="#789CF1"/>
+</linearGradient>
+</defs>
+</svg>
