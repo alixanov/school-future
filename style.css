@@ -1,11 +1,13 @@
 @font-face {
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro";
   src: url(./font/GothamMedium.ttf);
 }
+
 @font-face {
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold";
   src: url(./font/als-schlange-sans-bold.ttf);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +21,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .container {
   max-width: 1920px;
@@ -43,33 +46,61 @@ nav {
   justify-content: center;
   gap: 15px;
 }
-.nav-contact > a {
+.nav-contact>a {
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 20px;
+font-family: "Gotham Pro", sans-serif;  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 118.2%;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
-.nav-contact > button {
+
+
+.nav-contact>a:hover {
+  color: #49b3f7;
+  /* Изменение цвета при наведении */
+}
+
+.nav-contact>a:active {
+  color: #864ff1;
+  /* Цвет при нажатии */
+}
+
+.nav-contact>button {
   width: 222px;
   height: 57px;
   border-radius: 90px;
   color: #fff;
-  font-family: Gotham Pro;
-  font-size: 11px;
+font-family: "Gotham Pro", sans-serif;  font-size: 11px;
   font-weight: 700;
   line-height: 118.2%;
   letter-spacing: 1.375px;
   text-transform: uppercase;
   background: var(--4, linear-gradient(273deg, #864ff1 0%, #49b3f7 100%));
-  box-shadow: 0px 6px 21px 0px rgba(104, 130, 245, 0.67);
+  box-shadow: 0px 6px 21px rgba(104, 130, 245, 0.67);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nav-contact>button:hover {
+  background: linear-gradient(273deg, #49b3f7 0%, #864ff1 100%);
+  /* Изменение градиента */
+  box-shadow: 0px 8px 24px rgba(104, 130, 245, 0.8);
+  /* Увеличение тени */
+}
+
+.nav-contact>button:active {
+  background: linear-gradient(273deg, #864ff1 0%, #49b3f7 100%);
+  /* Обратный градиент */
+  box-shadow: 0px 4px 16px rgba(104, 130, 245, 0.5);
+  /* Уменьшенная тень */
 }
 
 .nav-bar {
   width: 100%;
   height: 45px;
-  padding: 1% 9% 3% 9%;
+  padding: 2% 9% 2% 9%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,14 +111,24 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 25px;
+
 }
 .nav-link > a {
   color: #243976;
   text-align: center;
-  font-family: Gotham Pro;
-  font-size: 14px;
+font-family: "Gotham Pro", sans-serif;  font-size: 14px;
   font-weight: 400;
   line-height: 118%;
+}
+
+.nav-link>a:hover {
+  color: #49b3f7;
+  /* Изменение цвета при наведении */
+}
+
+.nav-link>a:active {
+  color: #864ff1;
+  /* Цвет при нажатии */
 }
 
 .nav-user {
@@ -96,40 +137,65 @@ nav {
   justify-content: center;
   gap: 8px;
 }
+.nav-user > a {
+    color: #243976;
+      text-align: center;
+font-family: "Gotham Pro", sans-serif;      font-size: 14px;
+      font-weight: 400;
+      line-height: 118%;
+}
+
+.nav-user>a:hover {
+  color: #49b3f7;
+  /* Изменение цвета при наведении */
+}
+ 
+.nav-user>a:active {
+  color: #864ff1;
+  /* Цвет при нажатии */
+}
 .nav-button {
   width: 100%;
   display: flex;
   align-items: start;
   justify-content: start;
-  padding: 1% 9% 2% 9%;
+  padding: 0 9% 0 9%;
   gap: 12px;
   background: rgba(138, 197, 230, 0.189);
 }
-.nav-button > button {
+.nav-button>button {
   width: 130px;
   height: 30px;
   color: #fff;
-  font-family: Gotham Pro;
-  font-size: 12px;
+font-family: "Gotham Pro", sans-serif;  font-size: 12px;
   font-weight: 700;
   line-height: 118.2%;
   border-radius: 15px;
-  background: var(--5, linear-gradient(27deg, #4271df 16.72%, #789cf1 95.45%));
+  background: linear-gradient(27deg, #4271df 16.72%, #789cf1 95.45%);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, border-radius 0.3s ease;
 }
-.nav-button > button:hover {
-  border-radius: 25px;
-  background: var(--4, linear-gradient(273deg, #864ff1 0%, #49b3f7 100%));
+
+.nav-button>button:hover {
+  background: linear-gradient(273deg, #864ff1 0%, #49b3f7 100%);
+}
+
+.nav-button>button:active {
+  background: linear-gradient(273deg, #49b3f7 0%, #864ff1 100%);
+  opacity: 0.9;
+  /* Лёгкое затемнение */
 }
 .container-a {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5% 9% 4% 9%;
+  padding: 2% 9% 4% 9%;
   background: rgba(138, 197, 230, 0.189);
 }
 .left-a {
-  width: 50%;
+  /* width: 50%; */
   display: flex;
   align-items: start;
   justify-content: center;
@@ -138,14 +204,14 @@ nav {
 }
 .left-a > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 50px;
   font-weight: 500;
   line-height: 103.2%;
 }
-.left-a > h1 > span {
+.left-a >  span {
   color: #49b3f7;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 50px;
   font-weight: 400;
   line-height: 103.2%;
@@ -153,32 +219,51 @@ nav {
 .left-a > p {
   width: 420px;
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 17px;
+font-family: "Gotham Pro", sans-serif;  font-size: 17px;
   font-weight: 400;
   line-height: 165.2%;
 }
 .left-a > p > span {
   color: #243976;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 165.2%;
 }
-.left-a > button {
+.left-a>button {
   width: 240px;
   height: 53px;
-  border-radius: 90px;
-  background: var(--4, linear-gradient(273deg, #864ff1 0%, #49b3f7 100%));
-  box-shadow: 0px 6px 21px 0px rgba(104, 130, 245, 0.67);
+  border-radius: 45px;
+  /* Уменьшено для более сдержанного вида */
+  background: linear-gradient(273deg, #864ff1 0%, #49b3f7 100%);
   color: #fff;
   text-align: center;
-  font-family: Gotham Pro;
-  font-size: 11px;
+  font-family: "Gotham Pro", sans-serif;
+
+  font-size: 12px;
+  /* Немного увеличен для читаемости */
   font-weight: 700;
   line-height: 118.2%;
-  letter-spacing: 1.375px;
+  letter-spacing: 1.2px;
+  /* Сделано чуть меньше для современности */
   text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.left-a>button:hover {
+  background: linear-gradient(273deg, #49b3f7 0%, #864ff1 100%);
+  box-shadow: 0px 4px 12px rgba(104, 130, 245, 0.5);
+  /* Уменьшен размер и интенсивность */
+}
+
+.left-a>button:active {
+  background: linear-gradient(273deg, #49b3f7 0%, #5c8ce3 100%);
+  box-shadow: none;
+  /* Убирается тень для эффекта нажатия */
+  opacity: 0.9;
 }
 
 .social-a {
@@ -189,7 +274,7 @@ nav {
 }
 .social-a > p {
   color: #737373;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro",sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 165.2%;
@@ -197,6 +282,11 @@ nav {
 .social-a > img {
   width: 40px;
   height: 40px;
+  transition: .5s ease;
+}
+
+.social-a>img:hover {
+  transform: translateY(-3px);
 }
 .right-a {
   width: 50%;
@@ -205,51 +295,81 @@ nav {
   justify-content: center;
 }
 .right-a > img {
-  width: 673px;
-  height: 400px;
+  width: 100%;
+  height: 390px;
 }
+
+
+
+
+
+
+
+
+
 .container-b {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  padding: 3% 9% 3% 9%;
+  padding: 3% 9%;
   gap: 30px;
 }
-.title-b > h1 {
+
+.title-b>h1 {
   color: #243976;
   text-align: center;
-  font-family: ALSSchlangesans-Bold;
-  font-size: 40px;
+font-family: "ALSSchlangesans-Bold", sans-serif; 
+ font-size: 40px;
   font-weight: 400;
-  line-height: 103.2%;
+  line-height: 1.1;
 }
+
 .icon-b {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
-  padding-top: 15px;
+  gap: 60px;
+  padding-top: 25px;
 }
-.icon-b > div {
+
+.icon-b>div {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-.icon-b > div > img {
-  width: 70.18px;
+
+.icon-b>div:hover {
+  transform: scale(1.05);
+  /* Легкий зум на всю секцию */
+}
+
+.icon-b>div>img {
+  width: 70px;
   height: 70px;
+  transition: transform 0.3s ease;
 }
-.icon-b > div > p {
+.icon-b>div:hover>img {
+  transform: scale(1.01);
+  /* Едва заметное увеличение */
+  transition: transform 0.3s ease;
+  /* Плавный переход */
+}
+.icon-b>div>p {
   color: #243976;
   text-align: center;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 1.5;
+  transition: color 0.3s ease;
 }
+
+
+
 .buttom-b {
   width: 1140px;
   height: 160px;
@@ -259,13 +379,14 @@ nav {
   border-radius: 25px;
   background: #eff2fd;
   gap: 50px;
-  margin-top: 85px;
+  margin-top: 2%;
 }
 .ticket-bb {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 85px;
+  
 }
 .girl-svg > img {
   width: 100px;
@@ -279,7 +400,7 @@ nav {
 }
 .text-b > h3 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold ",sans-serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 103.2%;
@@ -287,11 +408,13 @@ nav {
 .text-b > p {
   width: 480px;
   color: #243976;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 130%;
+  margin-top: 10px;
 }
 .social-b {
   display: flex;
@@ -306,7 +429,8 @@ nav {
   border-radius: 90px;
   color: #fff;
   text-align: center;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 11px;
   font-weight: 700;
   line-height: 118.2%;
@@ -314,6 +438,13 @@ nav {
   text-transform: uppercase;
   background: var(--4, linear-gradient(273deg, #864ff1 0%, #49b3f7 100%));
   box-shadow: 0px 6px 21px 0px rgba(104, 130, 245, 0.67);
+}
+
+.social-b >button:hover {
+  background: linear-gradient(273deg, #49b3f7 0%, #864ff1 100%);
+  /* Изменение градиента */
+  box-shadow: 0px 8px 24px rgba(104, 130, 245, 0.8);
+  /* Увеличение тени */
 }
 .social-b div {
   display: flex;
@@ -323,11 +454,22 @@ nav {
 }
 .social-b > div > p {
   color: #737373;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 17px;
   font-weight: 400;
   line-height: 165.2%;
 }
+.social-b div>img {
+  width: 40px;
+  height: 40px;
+  transition: .5s ease;
+}
+.social-b div > img:hover  {
+ transform: translateY(3px);
+}
+
+/* Основные стили */
 .container-c {
   width: 100%;
   display: flex;
@@ -335,97 +477,106 @@ nav {
   justify-content: center;
   flex-direction: column;
   gap: 45px;
+  padding: 2% 9% 2% 9%;
 }
-.title-c > h1 {
+
+.title-c>h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 103.2%;
+  text-align: center;
 }
+
 .card-c {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.wrapper-ca {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-.box-left {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.box-left div {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-}
-.box-left > img {
-  width: 250.999px;
-  height: 227px;
-}
-.box-left > div > h3 {
-  color: #243976;
-  font-family: Gotham Pro;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 103%;
-}
-.box-left > div > p {
-  width: 310px;
-  color: #243976;
-  font-family: Gotham Pro;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 157%;
-}
 
+.wrapper-ca,
 .wrapper-cb {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 20px;
 }
 
+.box-left,
 .box-right {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 15px;
 }
 
-.box-right > div {
+.box-left div,
+.box-right div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
-.box-right > img {
-  width: 246.138px;
-  height: 217px;
+
+.box-left>img,
+.box-right>img {
+  width: 250px;
+  height: 227px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-.box-right >  div > h3 {
+
+.box-left>div>h3,
+.box-right>div>h3 {
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 103%;
+ font-family: "Gotham Pro", sans-serif;
+ font-size: 25px;
+  font-weight: 700;
+  line-height: 1.03;
+  margin: 10px 0 5px 0;
 }
-.box-right > div > p {
+
+.box-left>div>h4,
+.box-right>div>h4 {
   width: 310px;
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 15px;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 157%;
+  line-height: 1.57;
 }
+
+/* Hover-эффект */
+.box-left:hover img,
+.box-right:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.box-left:hover div,
+.box-right:hover div {
+  color: #1f61d4;
+}
+
+/* Дополнительные стили для изображений */
+.box-cb-img {
+  margin-bottom: 10px;
+}
+
+.wrapper-ca .box-left,
+.wrapper-cb .box-right {
+  transition: all 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
 
 .container-d {
   width: 100%;
@@ -433,7 +584,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2% 9% 1% 9%;
+  padding: 3% 9% 1% 9%;
   gap: 18px;
   background: #eff2fd;
 }
@@ -441,10 +592,12 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+
 }
 .title-d > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 42px;
   font-weight: 400;
   line-height: 90%;
@@ -456,37 +609,9 @@ nav {
   flex-direction: column;
   gap: 25px;
 }
-.box-da {
-  width: 517px;
-  height: 104px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  gap: 15px;
-  background: #fff;
-  box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
-}
-.box-da > div > h1 {
-  background: var(--4, linear-gradient(273deg, #864FF1 0%, #49B3F7 100%));
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-  font-family: Gotham Pro;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 103%; /
-}
-.box-da > div > p {
-  width: 413px;
-  height: 52px;
-  color: #243976;
-  font-family: Gotham Pro;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 130%;
-}
+
+
+
 
 .box-db {
   width: 517px;
@@ -495,37 +620,52 @@ line-height: 103%; /
   align-items: center;
   justify-content: center;
   gap: 15px;
+  padding: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+    border-radius: 25px;
 }
 
-.box-db > div > h1 {
-color: #243976;
-font-family: Gotham Pro;
-font-size: 20px;
-font-weight: 500;
-line-height: 100%; /* 20px */
-}
-.box-db > div > p {
-color: #39415a;
-font-family: Gotham Pro;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; /* 19.5px */
+.box-db:hover {
+  background: linear-gradient(273deg, #f3f4fd 0%, #e6e8fc 100%);
+  border-radius: 25px;
+  box-shadow: 5px 15px 40px rgba(30, 35, 66, 0.15);
 }
 
-.left-d > button {
+
+.box-db>div>h1 {
+  color: #243976;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.box-db>div>p {
+  color: #39415a;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 130%;
+}
+.left-d>button {
   width: 263px;
   height: 57px;
   border-radius: 90px;
-  background: var(--4, linear-gradient(273deg, #864ff1 0%, #49b3f7 100%));
-  box-shadow: 0px 6px 21px 0px rgba(104, 130, 245, 0.67);
+  background: linear-gradient(273deg, #864ff1 0%, #49b3f7 100%);
+  box-shadow: 0px 6px 21px rgba(104, 130, 245, 0.67);
   color: #fff;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 11px;
   font-weight: 700;
-  line-height: 118.2%;
   letter-spacing: 1.375px;
   text-transform: uppercase;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.left-d>button:hover {
+  background: linear-gradient(273deg, #49b3f7 0%, #864ff1 100%);
+  box-shadow: 0px 8px 25px rgba(104, 130, 245, 0.9);
+ 
 }
 .social-d {
   display: flex;
@@ -535,7 +675,7 @@ line-height: 130%; /* 19.5px */
 }
 .social-d > p {
   color: #737373;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 17px;
   font-weight: 400;
   line-height: 165.2%;
@@ -543,11 +683,17 @@ line-height: 130%; /* 19.5px */
 .social-d > div > img {
   width: 40px;
   height: 40px;
+  transition: .5s ease;
+}
+.social-d>div>img:hover {
+ transform: translateY(3px);
 }
 .right-d > img {
   width: 549.238px;
   height: 357.445px;
 }
+
+
 .container-e {
   width: 100%;
   display: flex;
@@ -557,101 +703,107 @@ line-height: 130%; /* 19.5px */
   padding: 3% 9% 2% 9%;
   gap: 25px;
 }
-.title-e > h1 {
+
+.title-e>h1 {
   color: #243976;
   text-align: center;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold", sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 103.2%;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
+.title-e>h1:hover {
+  color: #4867d2;
+  transform: scale(1.05);
+}
+
 .wrapper-e {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
-  padding: 0 9% 0 95;
+  padding: 0 9%;
 }
-.box-e-left > img {
+
+.box-e-left>img,
+.box-e-right>img {
   width: 224px;
   height: 206px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.box-e-left>img:hover,
+.box-e-right>img:hover {
+  transform: scale(1.05);
+}
+
 .card-e {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.ticket-left {
-   width: 260px;
-  height: 470px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
 
-  border-radius: 15px;
-  background: linear-gradient(180deg, #eff2fd 0%, #fcfcfc 100%);
-}
-
-.ticket-left > h1 {
-  color: #243976;
-  font-family: ALSSchlangesans-Bold;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 103.2%;
-}
-.ticket-left > p {
-  color: #243976;
-  font-family: Gotham Pro;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 150%; /* 22.5px */
-}
-.ticket-left > h4 {
-  color: #243976;
-  font-family: Gotham Pro;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 150%;
-}
+.ticket-left,
 .ticket-right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   width: 270px;
   height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
   border-radius: 15px;
-  background: var(--5, linear-gradient(27deg, #4271df 16.72%, #789cf1 95.45%));
+  background: linear-gradient(180deg, #eff2fd 0%, #fcfcfc 100%);
+  box-shadow: 0px 6px 20px rgba(30, 35, 66, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.ticket-right > h1 {
-  color: #fff;
-  font-family: ALSSchlangesans-Bold;
+
+.ticket-left:hover,
+.ticket-right:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 30px rgba(30, 35, 66, 0.15);
+}
+
+.ticket-left>h1,
+.ticket-right>h1 {
+  color: #243976;
+  font-family: "ALSSchlangesans-Bold", sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 103.2%;
-}
-.ticket-right > h4 {
-  color: #f8f9ff;
-  font-family: Gotham Pro;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 150%; /* 27px */
-}
-.ticket-right > p {
-  color: #f8f9ff;
-  font-family: Gotham Pro;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 150%;
+  margin-bottom: 10px;
 }
 
-.box-e-right > img {
-  width: 224px;
-  height: 206px;
+.ticket-left>p,
+.ticket-right>p {
+  color: #243976;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
 }
+
+.ticket-left>h4,
+.ticket-right>h4 {
+  color: #4867d2;
+  font-family: "Gotham Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+.ticket-left>h4:hover,
+.ticket-right>h4:hover {
+  color: #243976;
+  text-decoration: underline;
+}
+
 .container-r {
   width: 100%;
   display: flex;
@@ -666,7 +818,7 @@ line-height: 130%; /* 19.5px */
   width: 666px;
   color: #243976;
   text-align: center;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 103.2%;
@@ -692,7 +844,7 @@ line-height: 130%; /* 19.5px */
 .top-r > h1 {
   color: #243976;
   text-align: center;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 103.2%;
@@ -700,7 +852,7 @@ line-height: 130%; /* 19.5px */
 .top-r > p {
   color: #243976;
   text-align: center;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 157.2%; /* 23.58px */
@@ -725,7 +877,7 @@ line-height: 130%; /* 19.5px */
 .bottom-r > h1 {
   color: #243976;
   text-align: center;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -734,7 +886,7 @@ line-height: 130%; /* 19.5px */
 .bottom-r > p {
   color: #243976;
   text-align: center;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro", sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 157.2%;
@@ -763,7 +915,7 @@ line-height: 130%; /* 19.5px */
 }
 .ticket-r > div > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 400;
@@ -772,7 +924,8 @@ line-height: 130%; /* 19.5px */
 .ticket-r > div > p {
   width: 520px;
   color: #243976;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 130%;
@@ -796,8 +949,9 @@ line-height: 130%; /* 19.5px */
   height: 57px;
   border-radius: 90px;
   color: #fff;
-  font-family: Gotham Pro;
-  font-size: 11px;
+  font-family: "Gotham Pro", sans-serif;
+
+    font-size: 11px;
   font-weight: 700;
   line-height: 118.2%;
   letter-spacing: 1.375px;
@@ -807,8 +961,9 @@ line-height: 130%; /* 19.5px */
 }
 .snap-r > div > p {
   color: #737373;
-  font-family: Gotham Pro;
-  font-size: 17px;
+ font-family: "Gotham Pro", sans-serif;
+
+   font-size: 17px;
   font-weight: 400;
   line-height: 165.2%;
 }
@@ -830,7 +985,7 @@ line-height: 130%; /* 19.5px */
 .title-s > h1 {
   color: #243976;
   text-align: center;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 103.2%;
@@ -858,8 +1013,7 @@ line-height: 130%; /* 19.5px */
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
 }
 .ticket-s > h1 {
-  font-family: Gotham Pro;
-  font-size: 36px;
+font-family: "Gotham Pro", sans-serif;  font-size: 36px;
   font-weight: 500;
   line-height: 141%;
   background: var(--0, linear-gradient(180deg, #fff 0%, #ebf8f8 100%));
@@ -881,15 +1035,13 @@ line-height: 130%; /* 19.5px */
 }
 .box-s > h1 {
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 20px;
+font-family: "Gotham Pro", sans-serif;  font-size: 20px;
   font-weight: 500;
   line-height: 103.2%;
 }
 .box-s > h3 {
   height: 32px;
-  font-family: Gotham Pro;
-  font-size: 17px;
+font-family: "Gotham Pro", sans-serif;   font-size: 17px;
   font-weight: 400;
   line-height: 103.2%;
   background: var(--5, linear-gradient(27deg, #4271df 16.72%, #789cf1 95.45%));
@@ -904,8 +1056,7 @@ line-height: 130%; /* 19.5px */
 }
 .box-s > div {
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 14px;
+font-family: "Gotham Pro", sans-serif;   font-size: 14px;
   font-weight: 400;
   line-height: 103.2%;
 }
@@ -937,15 +1088,14 @@ line-height: 130%; /* 19.5px */
 }
 .left-text-q > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-weight: 300;
   line-height: 103.2%;
 }
 .left-text-q > p {
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 20px;
+font-family: "Gotham Pro", sans-serif;   font-size: 20px;
   font-weight: 400;
   line-height: 103.2%;
 }
@@ -965,7 +1115,7 @@ line-height: 130%; /* 19.5px */
 
 .container-x > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-weight: 400;
 }
@@ -1002,19 +1152,17 @@ line-height: 130%; /* 19.5px */
 .text-x > h1 {
   color: #243976;
   text-align: center;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 26px;
   font-weight: 400;
 }
 .text-x > h2 {
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 18px;
+font-family: "Gotham Pro", sans-serif;  font-size: 18px;
   font-weight: 400;
 }
 .text-x > p {
-  font-family: Gotham Pro;
-  font-size: 16px;
+font-family: "Gotham Pro", sans-serif;   font-size: 16px;
   font-weight: 400;
   text-decoration-line: underline;
   color: #4271df;
@@ -1022,8 +1170,7 @@ line-height: 130%; /* 19.5px */
 .box-x p {
   width: 280px;
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 16px;
+font-family: "Gotham Pro", sans-serif;   font-size: 16px;
   font-weight: 400;
 }
 
@@ -1055,7 +1202,7 @@ line-height: 130%; /* 19.5px */
 }
 .title-g > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
@@ -1073,7 +1220,7 @@ line-height: 130%; /* 19.5px */
 .text-q > p {
   /* width: 917px; */
   color: #243976;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro",sans-serif;
   font-size: 16px;
   font-weight: 500;
   gap: 25px;
@@ -1098,7 +1245,7 @@ line-height: 130%; /* 19.5px */
 }
 .section-g > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 32px;
   font-weight: 400;
   line-height: 100%;
@@ -1157,7 +1304,7 @@ line-height: 130%; /* 19.5px */
   width: 196px;
   height: 56px;
   color: #fff;
-  font-family: Gotham Pro;
+  font-family: "Gotham Pro",sans-serif;
   font-size: 10px;
   font-weight: 700;
   line-height: 118%;
@@ -1168,8 +1315,7 @@ line-height: 130%; /* 19.5px */
 .left-o > p {
   width: 280px;
   color: #9e9e9e;
-  font-family: Gotham Pro;
-  font-size: 13px;
+font-family: "Gotham Pro", sans-serif;   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
 }
@@ -1182,7 +1328,7 @@ line-height: 130%; /* 19.5px */
 }
 .right-o > h1 {
   color: #243976;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-weight: 400;
   line-height: 103%;
@@ -1192,7 +1338,7 @@ line-height: 130%; /* 19.5px */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: ALSSchlangesans-Bold;
+  font-family: "ALSSchlangesans-Bold",sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -1201,8 +1347,8 @@ line-height: 130%; /* 19.5px */
 .right-o > p {
   width: 506px;
   color: #243976;
-  font-family: Gotham Pro;
-  font-size: 20px;
+  font-family: "Gotham Pro", sans-serif;
+    font-size: 20px;
   font-weight: 400;
   line-height: 103.2%;
 }
@@ -1233,21 +1379,23 @@ footer {
 }
 .footer-link > h1 {
   color: #243976;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 20px;
   font-weight: 400;
   line-height: 103%;
 }
 .footer-link > a {
   color: #243976;
-  font-family: Gotham Pro;
+ font-family: "Gotham Pro", sans-serif;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 27px;
 }
 .footer-link > div > a {
   color: #243976;
-  font-family: Gotham Pro;
+font-family: "Gotham Pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 27px;
@@ -1266,7 +1414,7 @@ footer {
 }
 .social-link > h1 {
   color: #243976;
-  font-family: Gotham Pro;
+font-family: "Gotham Pro", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 103%;
@@ -1292,14 +1440,14 @@ footer {
 .location > div > p {
   width: 188px;
   color: #243976;
-  font-family: Gotham Pro;
+font-family: "Gotham Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 27px;
 }
 .location > div > a {
   color: #243976;
-  font-family: Gotham Pro;
+font-family: "Gotham Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 27px;
